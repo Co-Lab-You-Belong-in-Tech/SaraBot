@@ -5,8 +5,8 @@ const getPrompt = require("./getPrompt");
 const axios = require("axios");
 
 const app = new App({
-  token: `SLACK_BOT_TOKEN`,
-  signingSecret: `SLACK_SIGNING_SECRET`,
+  token: SLACK_BOT_TOKEN,
+  signingSecret: SLACK_SIGNING_SECRET,
   logLevel: LogLevel.DEBUG
 });
 
@@ -22,7 +22,7 @@ app.command("/test", async ({ command, ack, say }) => {
   //Here are functions I want to try out...
   try {
     const result = await app.client.chat.postMessage({
-      token: `SLACK_BOT_TOKEN`,
+      token: SLACK_BOT_TOKEN,
     channel,
     text: "Hello world"
   });
@@ -56,7 +56,7 @@ today.setHours(18, 11, 0);
   try {
     // Call chat.scheduleMessage with the built-in client
     const result = await app.client.chat.scheduleMessage({
-      token: `SLACK_BOT_TOKEN`,
+      token: SLACK_BOT_TOKEN,
       channel: mainChannel,
       post_at: today.getTime() / 1000,
       text: "It's a new day, make sure to chat with your team!"
@@ -73,7 +73,7 @@ async function populateConversationStore() {
   try {
     // Call the conversations.list method
     const result = await app.client.conversations.list({
-      token: `SLACK_BOT_TOKEN`,
+      token: SLACK_BOT_TOKEN,
       types: "public_channel,private_channel"
     });
     let conversationsStore = [];
@@ -117,7 +117,7 @@ async function postInNewChannel(channelName, channel) {
   }
   try {
     await app.client.chat.postMessage({
-    token: `SLACK_BOT_TOKEN`,
+    token: SLACK_BOT_TOKEN,
     // Channel to send message to
     channel: channel,
     // Include a button in the message (or whatever blocks you want!)
@@ -153,7 +153,7 @@ async function createNewChannel(newChannel) {
   try {
     const newConvo = await app.client.conversations.create({
       // The name of the conversation
-      token: `SLACK_BOT_TOKEN`,
+      token: SLACK_BOT_TOKEN,
       name: newChannel,
       is_private: false
     });
@@ -169,7 +169,7 @@ async function createNewChannel(newChannel) {
 async function inviteUserToSubChannel(user, subChannel) {
   try {
     const invite = await app.client.conversations.invite({
-      token: `SLACK_BOT_TOKEN`,
+      token: SLACK_BOT_TOKEN,
       channel: subChannel,
       users: user
     });
@@ -802,7 +802,7 @@ async function sendWelcomeImMessage(user, channel){
   try {
   // Call the chat.postMessage method using the WebClient
   const result = await app.client.chat.postMessage({
-    token: `SLACK_BOT_TOKEN`,
+    token: SLACK_BOT_TOKEN,
     channel: user,
     "blocks": [
 		{
@@ -839,7 +839,7 @@ async function sendEphemeralMessage(user, joinedChannel){
   try {
   // Call the chat.postEphemeral method using the WebClient
   const result = await app.client.chat.postEphemeral({
-    token: `SLACK_BOT_TOKEN`,
+    token: SLACK_BOT_TOKEN,
     channel: joinedChannel,
     user: user,
     "blocks": [
