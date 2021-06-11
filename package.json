@@ -1,0 +1,27 @@
+{
+  "name": "sarabot",
+  "version": "1.0.0",
+  "description": "Slackbot created to encourage remote worker to connect on a personal level",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Co-Lab-You-Belong-in-Tech/SaraBot.git"
+  },
+  "keywords": [
+    "Slackbot",
+    "remote"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Co-Lab-You-Belong-in-Tech/SaraBot/issues"
+  },
+  "homepage": "https://github.com/Co-Lab-You-Belong-in-Tech/SaraBot#readme",
+  "dependencies": {
+    "@slack/bolt": "^3.4.0",
+    "axios": "^0.21.1"
+  }
+}

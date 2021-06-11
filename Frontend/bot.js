@@ -1,4 +1,4 @@
-// Require the Bolt package (github.com/slackapi/bolt)
+// Require the Bolt package (https://www.npmjs.com/package/@slack/bolt)
 const { App, LogLevel, ExpressReceiver, WorkflowStep } = require("@slack/bolt");
 const getQuestion = require("./getQuestion");
 const getPrompt = require("./getPrompt");
