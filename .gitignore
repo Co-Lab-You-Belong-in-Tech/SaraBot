@@ -1,3 +1,20 @@
+# node / npm stuff
+/node_modules
+/package-lock.json
+
+# build products
+/dist
+
+# coverage
+/.nyc_output
+/coverage
+
+# macOS
+.DS_Store
+
+.env
+
+
 # Created by https://www.toptal.com/developers/gitignore/api/node
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
 
