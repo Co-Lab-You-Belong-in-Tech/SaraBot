@@ -1,22 +1,20 @@
 ---
-title: ステップの設定の保存
+title: saving
 lang: ja-jp
 slug: saving-steps
 order: 4
 ---
 
 <div class='section-content'>
+`view_submission` `WorkflowStep` `save` 
 
-ワークフローステップの設定モーダルが開いたら、アプリはワークフロー作成者がモーダルを送信するイベントである `view_submission` イベントを待ち受けます。このイベントを受信すると `WorkflowStep` 設定オブジェクト内の `save` コールバック関数が実行されます。
+`save` `update()` 
 
-`save` コールバック関数の中では、以下の引数を渡してステップの設定を保存するための `update()` 関数を利用できます。
-
-- `inputs` は、ワークフローステップ実行時にアプリが受け取ることを期待するデータの内容を表現するオブジェクトです
-- `outputs` は、ステップの実行が正常に完了したとき、同一ワークフロー内の後続のステップに提供するデータの内容を表現するオブジェクトの配列です。
-- `step_name` は、デフォルトのステップ名を上書きするために使用します
-- `step_image_url` は、デフォルトのステップのイメージ画像を上書きするために使用します
-
-これら引数をどのように構成するかの詳細は、[ドキュメント](https://api.slack.com/reference/workflows/workflow_step)を参考にしてください。
+- `inputs` 
+- `outputs` 
+- `step_name`
+- `step_image_url` 
+- (https://api.slack.com/reference/workflows/workflow_step)
 
 </div>
 
