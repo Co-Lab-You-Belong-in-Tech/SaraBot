@@ -1,11 +1,10 @@
 app.shortcut('open_modal', async ({ shortcut, ack, context }) => {
-  // グローバルショートカットリクエストの確認
   ack();
 
   try {
-    // 組み込みの WebClient を使って views.open API メソッドを呼び出す
+    //views.open API 
     const result = await app.client.views.open({
-      // `context` オブジェクトに保持されたトークンを使用
+      // `context`
       token: context.botToken,
       trigger_id: shortcut.trigger_id,
       view: {
