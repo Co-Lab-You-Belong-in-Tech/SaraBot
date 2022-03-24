@@ -7,7 +7,7 @@ app.command('/ticket', async ({ ack, body, client }) => {
       // view
       view: {
         type: 'modal',
-        // callback_id が view を特定するための識別子
+        // callback_id view 
         callback_id: 'view_1',
         title: {
           type: 'plain_text',
