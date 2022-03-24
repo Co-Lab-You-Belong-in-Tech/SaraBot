@@ -2,9 +2,9 @@ const whenSeptemberEnds = '1569887999';
 
 app.message('wake me up', async ({ message, context }) => {
   try {
-    // トークンを用いて chat.scheduleMessage 関数を呼び出す
+    //chat.scheduleMessage
     const result = await app.client.chat.scheduleMessage({
-      // アプリの初期化に用いたトークンを `context` オブジェクトに保存
+      // `context` 
       token: context.botToken,
       channel: message.channel,
       post_at: whenSeptemberEnds,
