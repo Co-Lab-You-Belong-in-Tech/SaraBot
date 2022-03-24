@@ -2,7 +2,7 @@ import { EventEmitter } from 'events';
 import { createServer } from 'http';
 import express from 'express';
 
-// EventEmitter は on() 関数を操作
+// EventEmitter on() 
 // https://nodejs.org/api/events.html#events_emitter_on_eventname_listener
 class simpleReceiver extends EventEmitter {
   constructor(signingSecret, endpoints) {
@@ -45,11 +45,9 @@ class simpleReceiver extends EventEmitter {
 
   async requestHandler(req, res) {
     let ackCalled = false;
-    // 着信リクエストをパースするparseBody 関数があると仮定
     const parsedReq = parseBody(req);
     const event = {
       body: parsedReq.body,
-      // レシーバーが確認作業に重要
       ack: (response) => {
         if (ackCalled) {
           return;
