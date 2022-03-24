@@ -8,7 +8,7 @@ async function authWithAcme({ payload, client, context, next }) {
     const user = await acme.lookupBySlackId(slackUserId)
     
   } catch (error) {
-      // Acme システム上にユーザが存在しないのでエラーをわたし、イベントプロセスを終了
+      // Acme
       if (error.message === 'Not Found') {
         await client.chat.postEphemeral({
           channel: payload.channel,
