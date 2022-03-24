@@ -1,6 +1,5 @@
 const welcomeChannelId = 'C12345';
 
-// 新しいユーザーがワークスペースに加入したタイミングで、指定のチャンネルにメッセージを送信して自己紹介を促す
 app.event('team_join', async ({ event, client }) => {
   try {
     const result = await client.chat.postMessage({
