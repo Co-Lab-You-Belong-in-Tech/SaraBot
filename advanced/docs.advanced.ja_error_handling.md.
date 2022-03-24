@@ -10,8 +10,7 @@ error: Bolt 2.x [2.x](https://slack.dev/bolt/ja-jp/tutorial/migration-v2)
 `try`/`catch`
 </div>
 
-```javascript
+javascript
 app.error((error) => {
   console.error(error);
 });
-```
