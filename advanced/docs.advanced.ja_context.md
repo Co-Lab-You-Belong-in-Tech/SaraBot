@@ -1,5 +1,5 @@
 ---
-title: context の追加
+title: context
 lang: ja-jp
 slug: context
 order: 6
