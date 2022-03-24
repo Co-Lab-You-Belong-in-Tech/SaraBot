@@ -1,19 +1,18 @@
 const app = new App({
   token,
-  signingSecret,
-  // クラスを作成する感じで
+  signingSecret
   convoStore: new simpleConvoStore()
 });
 
-// Firebaseのようなデータベースを使い conversation store を実装
+// Firebase conversation store
 class simpleConvoStore {
   set(conversationId, value, expiresAt) {
-    // Promise を返す
+    // Promise
     return db().ref('conversations/' + conversationId).set({ value, expiresAt });
   }
 
   get(conversationId) {
-    // Promise を返す
+    // Promise 
     return new Promise((resolve, reject) => {
       db().ref('conversations/' + conversationId).once('value').then((result) => {
         if (result !== undefined) {
@@ -24,7 +23,7 @@ class simpleConvoStore {
           }
           resolve(result.value)
         } else {
-          // Conversation が存在しないエラー
+          // Conversation 
           reject(new Error('Conversation not found'));
         }
       });
