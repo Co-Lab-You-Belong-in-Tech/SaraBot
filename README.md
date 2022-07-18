@@ -9,7 +9,7 @@ Slack Bot Created to Help Remote Workers Connect on a Personal Level.
 * Product Manager: Christine Medina, https://www.linkedin.com/in/christinemedinanyc/  
 * UX Designer: Liwam Beraki, https://www.linkedin.com/in/liwamberaki , www.liwamberaki.com
 * Developer: Sara Paranuk, https://www.linkedin.com/in/sara-paranuk-326197206 , https://github.com/Sara-pixie  
-* Developer: Estefani Baughman, https://www.linkedin.com/in/estefani-baughman-a313091ba/ , https://github.com/HonduranCoder  
+* Developer: Estefani Baughman, https://www.linkedin.com/in/stef-baughman/ , https://github.com/HonduranCoder  
 * Pod Mentor: Elyse Clement, https://www.linkedin.com/in/elyse-clement 
 
 Link to Product: https://hondurancoder.github.io/SlackAppPage/
